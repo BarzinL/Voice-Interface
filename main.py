@@ -56,7 +56,7 @@ def stop_recording():
     audio_data = np.concatenate(recording, axis=0).flatten()
     
     # Perform transcription directly on raw audio data
-    result = pipe(audio_data, language="en")["text"]
+    result = pipe(audio_data)["text"]
 
     # Print the result to the console
     print("Transcribed Text:", result)
